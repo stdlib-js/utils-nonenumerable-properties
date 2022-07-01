@@ -24,32 +24,30 @@ limitations under the License.
 
 > Return an array of an object's own non-enumerable property names and symbols.
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/utils-nonenumerable-properties
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-nonEnumerableProperties = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-nonenumerable-properties@umd/bundle.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/utils-nonenumerable-properties@umd/bundle.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.nonEnumerableProperties;
-})();
-</script>
+var nonEnumerableProperties = require( '@stdlib/utils-nonenumerable-properties' );
 ```
 
 #### nonEnumerableProperties( obj )
@@ -93,16 +91,11 @@ var props = nonEnumerableProperties( obj );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/utils-define-property@umd/bundle.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/assert-has-symbol-support@umd/bundle.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/symbol-ctor@umd/bundle.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/utils-nonenumerable-properties@umd/bundle.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var defineProperty = require( '@stdlib/utils-define-property' );
+var hasSymbolSupport = require( '@stdlib/assert-has-symbol-support' );
+var Symbol = require( '@stdlib/symbol-ctor' );
+var nonEnumerableProperties = require( '@stdlib/utils-nonenumerable-properties' );
 
 var hasSymbols = hasSymbolSupport();
 var props;
@@ -150,11 +143,6 @@ props = nonEnumerableProperties( obj );
 
 console.log( props );
 // => [ 'b', ... ]
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -243,6 +231,7 @@ Copyright &copy; 2016-2022. The Stdlib [Authors][stdlib-authors].
 [deno-url]: https://github.com/stdlib-js/utils-nonenumerable-properties/tree/deno
 [umd-url]: https://github.com/stdlib-js/utils-nonenumerable-properties/tree/umd
 [esm-url]: https://github.com/stdlib-js/utils-nonenumerable-properties/tree/esm
+[branches-url]: https://github.com/stdlib-js/utils-nonenumerable-properties/blob/main/branches.md
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/utils-nonenumerable-properties/main/LICENSE
 
@@ -250,13 +239,13 @@ Copyright &copy; 2016-2022. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/utils/enumerable-properties]: https://github.com/stdlib-js/utils-enumerable-properties/tree/umd
+[@stdlib/utils/enumerable-properties]: https://github.com/stdlib-js/utils-enumerable-properties
 
-[@stdlib/utils/inherited-nonenumerable-properties]: https://github.com/stdlib-js/utils-inherited-nonenumerable-properties/tree/umd
+[@stdlib/utils/inherited-nonenumerable-properties]: https://github.com/stdlib-js/utils-inherited-nonenumerable-properties
 
-[@stdlib/utils/nonenumerable-properties-in]: https://github.com/stdlib-js/utils-nonenumerable-properties-in/tree/umd
+[@stdlib/utils/nonenumerable-properties-in]: https://github.com/stdlib-js/utils-nonenumerable-properties-in
 
-[@stdlib/utils/properties]: https://github.com/stdlib-js/utils-properties/tree/umd
+[@stdlib/utils/properties]: https://github.com/stdlib-js/utils-properties
 
 <!-- </related-links> -->
 
