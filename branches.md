@@ -38,12 +38,12 @@ C -->|bundle| D[esm];
 C -->|bundle| E[deno];
 C -->|bundle| F[umd];
 
-click A href "https://github.com/stdlib-js/stdlib/tree/develop/lib/node_modules/%40stdlib/utils/nonenumerable-properties"
-click B href "https://github.com/stdlib-js/utils-nonenumerable-properties/tree/main"
-click C href "https://github.com/stdlib-js/utils-nonenumerable-properties/tree/production"
-click D href "https://github.com/stdlib-js/utils-nonenumerable-properties/tree/esm"
-click E href "https://github.com/stdlib-js/utils-nonenumerable-properties/tree/deno"
-click F href "https://github.com/stdlib-js/utils-nonenumerable-properties/tree/umd"
+%% click A href "https://github.com/stdlib-js/stdlib/tree/develop/lib/node_modules/%40stdlib/utils/nonenumerable-properties"
+%% click B href "https://github.com/stdlib-js/utils-nonenumerable-properties/tree/main"
+%% click C href "https://github.com/stdlib-js/utils-nonenumerable-properties/tree/production"
+%% click D href "https://github.com/stdlib-js/utils-nonenumerable-properties/tree/esm"
+%% click E href "https://github.com/stdlib-js/utils-nonenumerable-properties/tree/deno"
+%% click F href "https://github.com/stdlib-js/utils-nonenumerable-properties/tree/umd"
 ```
 
 [stdlib-url]: https://github.com/stdlib-js/stdlib/tree/develop/lib/node_modules/%40stdlib/utils/nonenumerable-properties
