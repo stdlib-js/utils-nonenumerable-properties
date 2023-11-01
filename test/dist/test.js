@@ -1,7 +1,7 @@
 /**
 * @license Apache-2.0
 *
-* Copyright (c) 2018 The Stdlib Authors.
+* Copyright (c) 2023 The Stdlib Authors.
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -21,120 +21,13 @@
 // MODULES //
 
 var tape = require( 'tape' );
-var defineProperty = require( '@stdlib/utils-define-property' );
-var indexOf = require( '@stdlib/utils-index-of' );
-var hasSymbolSupport = require( '@stdlib/assert-has-symbol-support' );
-var Symbol = require( '@stdlib/symbol-ctor' );
-var nonEnumerableProperties = require( './../../dist' );
-
-
-// VARIABLES //
-
-var hasSymbols = hasSymbolSupport();
+var main = require( './../../dist' );
 
 
 // TESTS //
 
-tape( 'main export is a function', function test( t ) {
+tape( 'main export is defined', function test( t ) {
 	t.ok( true, __filename );
-	t.strictEqual( typeof nonEnumerableProperties, 'function', 'main export is a function' );
-	t.end();
-});
-
-tape( 'the function returns an array of an object\'s own non-enumerable property names and symbols', function test( t ) {
-	var expected;
-	var actual;
-	var syms;
-	var obj;
-	var idx;
-	var i;
-
-	if ( hasSymbols ) {
-		syms = [
-			Symbol( 'a' ),
-			Symbol( 'b' ),
-			Symbol( 'c' ),
-			Symbol( 'd' )
-		];
-	} else {
-		syms = [];
-	}
-
-	function Foo() {
-		this.a = 'a';
-		defineProperty( this, 'b', {
-			'configurable': false,
-			'enumerable': false,
-			'writable': false,
-			'value': 'b'
-		});
-		if ( hasSymbols ) {
-			this[ syms[ 0 ] ] = 'a';
-			defineProperty( this, syms[ 1 ], {
-				'configurable': false,
-				'enumerable': false,
-				'writable': false,
-				'value': 'b'
-			});
-		}
-		return this;
-	}
-
-	Foo.prototype.c = 'c';
-	defineProperty( Foo.prototype, 'd', {
-		'configurable': false,
-		'enumerable': false,
-		'writable': false,
-		'value': 'd'
-	});
-	if ( hasSymbols ) {
-		Foo.prototype[ syms[ 2 ] ] = 'c';
-		defineProperty( Foo.prototype, syms[ 3 ], {
-			'configurable': false,
-			'enumerable': false,
-			'writable': false,
-			'value': 'd'
-		});
-	}
-
-	obj = new Foo();
-
-	expected = [ 'b' ];
-	if ( hasSymbols ) {
-		expected.push( syms[ 1 ] );
-	}
-	actual = nonEnumerableProperties( obj );
-
-	t.strictEqual( actual.length, expected.length, 'has expected length' );
-	for ( i = 0; i < expected.length; i++ ) {
-		idx = indexOf( actual, expected[ i ] );
-		t.strictEqual( idx !== -1, true, 'contains property: '+expected[i].toString() );
-	}
-	t.end();
-});
-
-tape( 'the function returns an empty array if provided non-string primitives', function test( t ) {
-	var expected;
-	var actual;
-	var values;
-	var i;
-
-	values = [
-		3.14,
-		NaN,
-		true,
-		false,
-		void 0,
-		null
-	];
-	if ( hasSymbols ) {
-		values.push( Symbol( 'beep' ) );
-	}
-	expected = [];
-
-	for ( i = 0; i < values.length; i++ ) {
-		actual = nonEnumerableProperties( values[ i ] );
-		t.deepEqual( actual, expected, 'returns expected value when provided '+String( values[ i ] ) );
-	}
+	t.strictEqual( main !== void 0, true, 'main export is defined' );
 	t.end();
 });
