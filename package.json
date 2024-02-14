@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/utils-nonenumerable-properties",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Return an array of an object's own non-enumerable property names and symbols.",
   "license": "Apache-2.0",
   "author": {
@@ -37,15 +37,15 @@
     "url": "https://github.com/stdlib-js/stdlib/issues"
   },
   "dependencies": {
-    "@stdlib/assert-is-nonenumerable-property": "^0.1.0",
-    "@stdlib/utils-property-names": "^0.1.0",
-    "@stdlib/utils-property-symbols": "^0.1.1"
+    "@stdlib/assert-is-nonenumerable-property": "^0.2.0",
+    "@stdlib/utils-property-names": "^0.2.0",
+    "@stdlib/utils-property-symbols": "^0.2.0"
   },
   "devDependencies": {
     "@stdlib/assert-has-symbol-support": "^0.1.1",
     "@stdlib/assert-is-array": "^0.1.1",
     "@stdlib/random-base-randu": "^0.1.0",
-    "@stdlib/symbol-ctor": "^0.1.1",
+    "@stdlib/symbol-ctor": "^0.2.0",
     "@stdlib/utils-define-property": "^0.1.1",
     "@stdlib/utils-index-of": "^0.1.0",
     "tape": "git+https://github.com/kgryte/tape.git#fix/globby",
