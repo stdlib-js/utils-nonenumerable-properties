@@ -39,7 +39,8 @@
   "dependencies": {
     "@stdlib/assert-is-nonenumerable-property": "^0.2.0",
     "@stdlib/utils-property-names": "^0.2.0",
-    "@stdlib/utils-property-symbols": "^0.2.0"
+    "@stdlib/utils-property-symbols": "^0.2.0",
+    "@stdlib/error-tools-fmtprodmsg": "^0.2.0"
   },
   "devDependencies": {
     "@stdlib/assert-has-symbol-support": "^0.1.1",
