@@ -42,6 +42,11 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import nonEnumerableProperties from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-nonenumerable-properties@deno/mod.js';
+```
+The previous example will load the latest bundled code from the deno branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/utils-nonenumerable-properties/tags). For example,
+
+```javascript
 import nonEnumerableProperties from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-nonenumerable-properties@v0.2.1-deno/mod.js';
 ```
 
@@ -90,7 +95,7 @@ var props = nonEnumerableProperties( obj );
 import defineProperty from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-define-property@deno/mod.js';
 import hasSymbolSupport from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-has-symbol-support@deno/mod.js';
 import Symbol from 'https://cdn.jsdelivr.net/gh/stdlib-js/symbol-ctor@deno/mod.js';
-import nonEnumerableProperties from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-nonenumerable-properties@v0.2.1-deno/mod.js';
+import nonEnumerableProperties from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-nonenumerable-properties@deno/mod.js';
 
 var hasSymbols = hasSymbolSupport();
 var props;
