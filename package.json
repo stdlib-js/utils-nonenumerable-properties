@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/utils-nonenumerable-properties",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Return an array of an object's own non-enumerable property names and symbols.",
   "license": "Apache-2.0",
   "author": {
@@ -37,17 +37,17 @@
     "url": "https://github.com/stdlib-js/stdlib/issues"
   },
   "dependencies": {
-    "@stdlib/assert-is-nonenumerable-property": "^0.1.1",
-    "@stdlib/utils-property-names": "^0.2.1",
-    "@stdlib/utils-property-symbols": "^0.2.1"
+    "@stdlib/assert-is-nonenumerable-property": "^0.1.2",
+    "@stdlib/utils-property-names": "^0.2.2",
+    "@stdlib/utils-property-symbols": "^0.2.2"
   },
   "devDependencies": {
-    "@stdlib/assert-has-symbol-support": "^0.2.1",
-    "@stdlib/assert-is-array": "^0.2.1",
+    "@stdlib/assert-has-symbol-support": "^0.2.2",
+    "@stdlib/assert-is-array": "^0.2.2",
     "@stdlib/random-base-randu": "^0.2.1",
-    "@stdlib/symbol-ctor": "^0.2.1",
-    "@stdlib/utils-define-property": "^0.2.3",
-    "@stdlib/utils-index-of": "^0.2.1",
+    "@stdlib/symbol-ctor": "^0.2.2",
+    "@stdlib/utils-define-property": "^0.2.4",
+    "@stdlib/utils-index-of": "^0.2.2",
     "tape": "git+https://github.com/kgryte/tape.git#fix/globby",
     "istanbul": "^0.4.1",
     "tap-min": "git+https://github.com/Planeshifter/tap-min.git",
